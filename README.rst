@@ -1,62 +1,74 @@
-======================
-cookiecutter-pypackage
-======================
+###################################
+Python Application Project Template
+###################################
 
-Cookiecutter template for a Python package. See https://github.com/audreyr/cookiecutter.
+.. _travis: https://travis-ci.org/mdklatt/cookiecutter-python-app
+.. |badge| image:: https://travis-ci.org/mdklatt/cookiecutter-python-app.png
+   :alt: Travis CI build status
+   :target: `travis`_
 
-* Free software: BSD license
-* Pytest_ runner: Supports `unittest`, `pytest`, `nose` style tests and more
-* Travis-CI_: Ready for Travis Continuous integration testing
-* Tox_ testing: Setup to easily test for python 2.6, 2.7, 3.3 and PyPy_
-* Sphinx_ docs: Documentation raedy for generation with, for example, ReadTheDocs_
-* Wheel_ support: Use the newest python package distribution standard from the get go
+|badge|
 
+.. _Cookiecutter: http://cookiecutter.readthedocs.org
+.. _Python Packaging User Guide: https://packaging.python.org/en/latest/distributing.html#configuring-your-project
+.. _Packaging a Python library: http://blog.ionelmc.ro/2014/05/25/python-packaging
+
+
+This is a `Cookiecutter`_ template for creating a Python application project.
+
+The project layout is based on the `Python Packaging User Guide`_. The current
+conventional wisdom forgoes the use of a source directory, but moving the
+package out of the project root provides several advantages (*cf.*
+`Packaging a Python library`_).
+
+
+.. _py27: https://github.com/mdklatt/cookiecutter-python-app/tree/py27
+
+The `py27`_ branch is for Python 2.7 compatibility; it is no longer actively
+maintained.
+
+
+================
+Project Features
+================
+
+.. _pytest: http://pytest.org
+.. _Sphinx: http://sphinx-doc.org
+.. _MIT License: http://choosealicense.com/licenses/mit
+
+- Python 3.5+
+- `MIT License`_
+- `pytest`_ test suite
+- `Sphinx`_ documentation
+
+
+====================
+Application Features
+====================
+
+.. _YAML: http://pyyaml.org/wiki/PyYAML
+
+- CLI with subcommands
+- Logging
+- Hierarchical `YAML`_ configuration
+
+
+=====
 Usage
------
+=====
 
-Generate a Python package project::
-
-    cookiecutter https://github.com/Nekroze/cookiecutter-pypackage.git
-
-Then:
-
-* Create a repo and put it there.
-* Add the repo to your Travis CI account.
-* Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
-* Run `tox` to make sure all tests pass.
-* Release your package the standard Python way.
-
-Not Exactly What You Want?
---------------------------
-
-Don't worry, you have options:
-
-Similar Cookiecutter Templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* `audreyr/cookiecutter-pypackage`_: The original pypackage, uses unittest
-for testing and other minor changes.
-
-Fork This
-~~~~~~~~~
-
-If you have differences in your preferred setup, I encourage you to fork this
-to create your own version. Once you have your fork working, add it to the
-Similar Cookiecutter Templates list with a brief explanation. It's up to you
-whether or not to rename your fork.
-
-Or Submit a Pull Request
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-I also accept pull requests on this, if they're small, atomic, and if they
-make my own packaging experience better.
+.. _GitHub: https://github.com/mdklatt/cookiecutter-python-app
 
 
-.. _Travis-CI: http://travis-ci.org/
-.. _Tox: http://testrun.org/tox/
-.. _Sphinx: http://sphinx-doc.org/
-.. _ReadTheDocs: https://readthedocs.org/
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
-.. _Pytest: http://pytest.org/
-.. _PyPy: http://pypy.org/
-.. _Wheel: http://pythonwheels.com
+Install Python requirements for using the template:
+
+.. code-block:: console
+
+  $ python -m pip install --user --requirement=requirements.txt
+
+
+Create a new project directly from the template on `GitHub`_:
+
+.. code-block:: console
+
+  $ cookiecutter gh:mdklatt/cookiecutter-python-app
