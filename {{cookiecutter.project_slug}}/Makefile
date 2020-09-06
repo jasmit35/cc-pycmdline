@@ -56,4 +56,4 @@ sdist: clean
 	ls -l dist
 
 run:
-	python src/{{ cookiecutter.app_name }}/core/{{ cookiecutter.app_name }}.py >Synctify.log 2>Synctify.err
+	python src/{{cookiecutter.app_name}}/core/{{cookiecutter.app_name}}.py >Synctify.log 2>Synctify.err
